@@ -29,7 +29,5 @@ presCycles <- seq(1980, 2012, 4)
 presCandsScores %>% 
   filter(Party==200, cycle %in% presCycles) %>% 
   ggplot(aes(cycle, cfscore)) + 
-  geom_boxplot() +
+  geom_boxplot() + geom_smooth(method="lm", se=F, aes(group=1)) +
   ggtitle("Republican Presidential Candidates...\n ...Are Getting More Conservative")
-  
-
