@@ -34,3 +34,9 @@ g <- presCandsScores %>%
 g
 
 ggsave("rep_cand_ideology.png", g)
+
+##########################################################################################
+
+### Contributor data
+
+rawConScores <- read_csv("contributor_cfscores_st_fed_1979_2012.csv.zip")
